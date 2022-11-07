@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import FileUpload from "./AnswerType/FileUpload";
 
 import { GoogleFormProvider, useGoogleForm } from "react-google-forms-hooks";
 
@@ -77,6 +78,7 @@ const App = () => {
     <GoogleFormProvider {...methods}>
       <Form onSubmit={methods.handleSubmit(onSubmit)}>
         <Questions />
+        <FileUpload />
         <button type="submit">Submit</button>
       </Form>
     </GoogleFormProvider>
