@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 
-const fileUpload = () => {
+const FileUpload = () => {
  const [file,setFile] = useState()
 
 
@@ -22,6 +22,7 @@ const fileUpload = () => {
       },
     };
     axios.post(url, formData, config).then((response) => {
+        setFile(response.data)
       console.log(response.data);
     });
  }
@@ -37,4 +38,4 @@ const fileUpload = () => {
     )
 }
 
-export default fileUpload
+export default FileUpload
